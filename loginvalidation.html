@@ -1,0 +1,17 @@
+ <form action="action_page.php">
+<div class="imgcontainer">
+<img src="D:\17341A0594\login image.png" height="300" width="300"alt="login"class="login">
+</div>
+<div class="container">
+<lable for="sname"><b>sname</b></lable>
+<input type="text"placeholder="enter sname" name="sname" required>
+
+<br></br>
+<lable for="email"><b>email</b></lable>
+ <input type="text"  placeholder="enter your mail id" name="email" pattern="([^a-z])" title="must contain only lowercase letters"  required>
+<br></br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain alteast one number and one uppercase and one lowercase letter and atleast 8 or more characters" required>
+<input type="submit" value="submit">
+</div>
+</form>

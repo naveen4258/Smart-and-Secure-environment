@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="icon.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+
+.navbar a.left {
+  float: left;
+}
+
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.main {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  width:50vw;
+  background-color: white;
+  padding-left: 30%;
+}
+
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.container {
+  padding: 16px;
+  width:50vw;
+  
+  
+}
+
+
+input[type=text], input[type=password]{
+  width: 40vw;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40vw;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>VEHICLE TRACKING</h1>
+  </div>
+
+  
+
+<div class="navbar">
+   <a href="#" onclick="document.getElementById('id4').style.display='block';document.getElementById('id5').style.display='none';document.getElementById('id6').style.display='none'">Home</a>
+  <a href="#" onclick="document.getElementById('id5').style.display='block';document.getElementById('id4').style.display='none';document.getElementById('id5').style.display='none'">About us</a>
+  <a href="#"onclick="document.getElementById('id6').style.display='block';document.getElementById('id5').style.display='none';document.getElementById('id4').style.display='none'">Contact</a>
+</div>
+
+<div class="main" id="id4" style="display:none">
+
+<form method="POST" action="/_action.php">
+  <div class="container">
+    <h2>User Registration</h2>
+    <label for="username"><b>Username</b></label>
+    <br>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+<br>
+
+    <label for="vehiclename"><b>Vehicle name</b></label>
+      <br>
+    <input type="text" placeholder="Enter Vehicle name" name="vehiclename" required>
+<br>
+    <label for="Vehicle ID"><b>Vehicle ID</b></label>
+      <br>
+    <input type="text" placeholder="Enter Vehicle ID" name="Vehicle ID<" required>
+<br>
+    <label for="Email"><b>Email</b></label>
+      <br>
+    <input type="text" placeholder="Enter Email" name="Email" required>
+<br>
+    <label for="Phone no"><b>Phone no</b></label>
+      <br>
+    <input type="text" placeholder="Enter Phone no" name="Phone no" required>
+    <button type="submit" class="registerbtn">Registration</button>
+
+  </div>
+</form>
+</div>
+  <div class="main" id="id5" style="display:none">
+
+<form method="POST" action="http://192.168.43.220/projects/Home.html">
+  <div class="container">
+    <h2>User Login</h2>
+    <label for="username"><b>Username</b></label>
+    <br>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br>
+    <button type="submit" class="registerbtn">Login</button>
+  </div>
+</form>
+</div>
+
+<div class="main" id="id6" style="display:none">
+
+<form method="POST" action="http://192.168.43.220/projects/Home.html">
+<div class="container">
+  <h2>Admin Login</h2>
+  <label for="username"><b>Admin</b></label>
+  <br>
+  <input type="text" placeholder="Enter Admin" name="admin" required>
+  <br>
+  <label for="psw"><b>Password</b></label>
+  <br>
+  <input type="password" placeholder="Enter Password" name="psw" required>
+  <br>
+  <button type="submit" class="registerbtn">Login</button>
+</div>
+</form>
+</div>
+
+
+</body>
+</html>
